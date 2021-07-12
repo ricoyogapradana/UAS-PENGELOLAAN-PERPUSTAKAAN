@@ -1,0 +1,16 @@
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.exe
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.pdb
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.xml
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbprojAssemblyReference.cache
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Admin.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Anggota.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Resources.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbproj.GenerateResource.cache
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbproj.CoreCompileInputs.cache
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.exe
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.xml
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.pdb
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Buku.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Peminjaman.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Penerbit.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Penulis.resources

@@ -24,6 +24,15 @@ Partial Class Form_Peminjaman
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox_Add_Peminjaman_status = New System.Windows.Forms.ComboBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.TextBox_Add_Peminjaman_penerbit = New System.Windows.Forms.TextBox()
+        Me.TextBox_Add_Peminjaman_penulis = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam = New System.Windows.Forms.DateTimePicker()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ComboBox_Add_Peminjaman_namaPeminjam = New System.Windows.Forms.ComboBox()
         Me.ComboBox_Add_Peminjaman_idBuku = New System.Windows.Forms.ComboBox()
         Me.ComboBox_Add_Peminjaman_namaAdmin = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,14 +44,12 @@ Partial Class Form_Peminjaman
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox_Add_Peminjaman_namaPeminjam = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian = New System.Windows.Forms.DateTimePicker()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox_Add_Peminjaman_penulis = New System.Windows.Forms.TextBox()
-        Me.TextBox_Add_Peminjaman_penerbit = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox_Edit_Peminjaman_id = New System.Windows.Forms.ComboBox()
+        Me.Button_Edit_Peminjaman_Refresh = New System.Windows.Forms.Button()
+        Me.Button_Edit_Peminjaman_Delete = New System.Windows.Forms.Button()
+        Me.ComboBox_Edit_Peminjaman_status = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox_Edit_Peminjaman_penerbit = New System.Windows.Forms.TextBox()
         Me.TextBox_Edit_Peminjaman_penulis = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -55,17 +62,12 @@ Partial Class Form_Peminjaman
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button_Edit_Peminjaman_Update = New System.Windows.Forms.Button()
         Me.Button_Edit_Peminjaman_New = New System.Windows.Forms.Button()
-        Me.TextBox_Edit_Peminjaman_id = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.ComboBox_Edit_Peminjaman_status = New System.Windows.Forms.ComboBox()
-        Me.Button_Peminjam_Exit = New System.Windows.Forms.Button()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.ComboBox_Add_Peminjaman_status = New System.Windows.Forms.ComboBox()
+        Me.Button_Peminjaman_Exit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -108,6 +110,77 @@ Partial Class Form_Peminjaman
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "TAMBAH PEMINJAMAN"
+        '
+        'ComboBox_Add_Peminjaman_status
+        '
+        Me.ComboBox_Add_Peminjaman_status.FormattingEnabled = True
+        Me.ComboBox_Add_Peminjaman_status.Location = New System.Drawing.Point(135, 266)
+        Me.ComboBox_Add_Peminjaman_status.Name = "ComboBox_Add_Peminjaman_status"
+        Me.ComboBox_Add_Peminjaman_status.Size = New System.Drawing.Size(127, 21)
+        Me.ComboBox_Add_Peminjaman_status.TabIndex = 33
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(19, 269)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(50, 13)
+        Me.Label19.TabIndex = 32
+        Me.Label19.Text = "STATUS"
+        '
+        'TextBox_Add_Peminjaman_penerbit
+        '
+        Me.TextBox_Add_Peminjaman_penerbit.Location = New System.Drawing.Point(135, 161)
+        Me.TextBox_Add_Peminjaman_penerbit.Name = "TextBox_Add_Peminjaman_penerbit"
+        Me.TextBox_Add_Peminjaman_penerbit.Size = New System.Drawing.Size(177, 20)
+        Me.TextBox_Add_Peminjaman_penerbit.TabIndex = 30
+        '
+        'TextBox_Add_Peminjaman_penulis
+        '
+        Me.TextBox_Add_Peminjaman_penulis.Location = New System.Drawing.Point(135, 135)
+        Me.TextBox_Add_Peminjaman_penulis.Name = "TextBox_Add_Peminjaman_penulis"
+        Me.TextBox_Add_Peminjaman_penulis.Size = New System.Drawing.Size(177, 20)
+        Me.TextBox_Add_Peminjaman_penulis.TabIndex = 29
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(18, 164)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(95, 13)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "NAMA PENERBIT"
+        '
+        'DateTimePicker_Add_Peminjaman_tanggalPengembalian
+        '
+        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Location = New System.Drawing.Point(169, 231)
+        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Name = "DateTimePicker_Add_Peminjaman_tanggalPengembalian"
+        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.TabIndex = 27
+        '
+        'DateTimePicker_Add_Peminjaman_tanggalPinjam
+        '
+        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Location = New System.Drawing.Point(169, 205)
+        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Name = "DateTimePicker_Add_Peminjaman_tanggalPinjam"
+        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.TabIndex = 26
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(18, 237)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(145, 13)
+        Me.Label6.TabIndex = 25
+        Me.Label6.Text = "TANGGAL PENGEMBALIAN"
+        '
+        'ComboBox_Add_Peminjaman_namaPeminjam
+        '
+        Me.ComboBox_Add_Peminjaman_namaPeminjam.FormattingEnabled = True
+        Me.ComboBox_Add_Peminjaman_namaPeminjam.Location = New System.Drawing.Point(135, 57)
+        Me.ComboBox_Add_Peminjaman_namaPeminjam.Name = "ComboBox_Add_Peminjaman_namaPeminjam"
+        Me.ComboBox_Add_Peminjaman_namaPeminjam.Size = New System.Drawing.Size(212, 21)
+        Me.ComboBox_Add_Peminjaman_namaPeminjam.TabIndex = 23
         '
         'ComboBox_Add_Peminjaman_idBuku
         '
@@ -204,62 +277,11 @@ Partial Class Form_Peminjaman
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "ID"
         '
-        'ComboBox_Add_Peminjaman_namaPeminjam
-        '
-        Me.ComboBox_Add_Peminjaman_namaPeminjam.FormattingEnabled = True
-        Me.ComboBox_Add_Peminjaman_namaPeminjam.Location = New System.Drawing.Point(135, 57)
-        Me.ComboBox_Add_Peminjaman_namaPeminjam.Name = "ComboBox_Add_Peminjaman_namaPeminjam"
-        Me.ComboBox_Add_Peminjaman_namaPeminjam.Size = New System.Drawing.Size(212, 21)
-        Me.ComboBox_Add_Peminjaman_namaPeminjam.TabIndex = 23
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(18, 237)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 13)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "TANGGAL PENGEMBALIAN"
-        '
-        'DateTimePicker_Add_Peminjaman_tanggalPinjam
-        '
-        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Location = New System.Drawing.Point(169, 205)
-        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Name = "DateTimePicker_Add_Peminjaman_tanggalPinjam"
-        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker_Add_Peminjaman_tanggalPinjam.TabIndex = 26
-        '
-        'DateTimePicker_Add_Peminjaman_tanggalPengembalian
-        '
-        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Location = New System.Drawing.Point(169, 231)
-        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Name = "DateTimePicker_Add_Peminjaman_tanggalPengembalian"
-        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker_Add_Peminjaman_tanggalPengembalian.TabIndex = 27
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(18, 164)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(95, 13)
-        Me.Label9.TabIndex = 28
-        Me.Label9.Text = "NAMA PENERBIT"
-        '
-        'TextBox_Add_Peminjaman_penulis
-        '
-        Me.TextBox_Add_Peminjaman_penulis.Location = New System.Drawing.Point(135, 135)
-        Me.TextBox_Add_Peminjaman_penulis.Name = "TextBox_Add_Peminjaman_penulis"
-        Me.TextBox_Add_Peminjaman_penulis.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox_Add_Peminjaman_penulis.TabIndex = 29
-        '
-        'TextBox_Add_Peminjaman_penerbit
-        '
-        Me.TextBox_Add_Peminjaman_penerbit.Location = New System.Drawing.Point(135, 161)
-        Me.TextBox_Add_Peminjaman_penerbit.Name = "TextBox_Add_Peminjaman_penerbit"
-        Me.TextBox_Add_Peminjaman_penerbit.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox_Add_Peminjaman_penerbit.TabIndex = 30
-        '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Peminjaman_id)
+        Me.GroupBox2.Controls.Add(Me.Button_Edit_Peminjaman_Refresh)
+        Me.GroupBox2.Controls.Add(Me.Button_Edit_Peminjaman_Delete)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Peminjaman_status)
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Peminjaman_penerbit)
@@ -274,7 +296,6 @@ Partial Class Form_Peminjaman
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Peminjaman_Update)
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Peminjaman_New)
-        Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Peminjaman_id)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
@@ -286,6 +307,49 @@ Partial Class Form_Peminjaman
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "TAMBAH PEMINJAMAN"
+        '
+        'ComboBox_Edit_Peminjaman_id
+        '
+        Me.ComboBox_Edit_Peminjaman_id.FormattingEnabled = True
+        Me.ComboBox_Edit_Peminjaman_id.Location = New System.Drawing.Point(135, 32)
+        Me.ComboBox_Edit_Peminjaman_id.Name = "ComboBox_Edit_Peminjaman_id"
+        Me.ComboBox_Edit_Peminjaman_id.Size = New System.Drawing.Size(117, 21)
+        Me.ComboBox_Edit_Peminjaman_id.TabIndex = 35
+        '
+        'Button_Edit_Peminjaman_Refresh
+        '
+        Me.Button_Edit_Peminjaman_Refresh.Location = New System.Drawing.Point(191, 306)
+        Me.Button_Edit_Peminjaman_Refresh.Name = "Button_Edit_Peminjaman_Refresh"
+        Me.Button_Edit_Peminjaman_Refresh.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Peminjaman_Refresh.TabIndex = 34
+        Me.Button_Edit_Peminjaman_Refresh.Text = "REFRESH"
+        Me.Button_Edit_Peminjaman_Refresh.UseVisualStyleBackColor = True
+        '
+        'Button_Edit_Peminjaman_Delete
+        '
+        Me.Button_Edit_Peminjaman_Delete.Location = New System.Drawing.Point(110, 306)
+        Me.Button_Edit_Peminjaman_Delete.Name = "Button_Edit_Peminjaman_Delete"
+        Me.Button_Edit_Peminjaman_Delete.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Peminjaman_Delete.TabIndex = 33
+        Me.Button_Edit_Peminjaman_Delete.Text = "DELETE"
+        Me.Button_Edit_Peminjaman_Delete.UseVisualStyleBackColor = True
+        '
+        'ComboBox_Edit_Peminjaman_status
+        '
+        Me.ComboBox_Edit_Peminjaman_status.FormattingEnabled = True
+        Me.ComboBox_Edit_Peminjaman_status.Location = New System.Drawing.Point(135, 266)
+        Me.ComboBox_Edit_Peminjaman_status.Name = "ComboBox_Edit_Peminjaman_status"
+        Me.ComboBox_Edit_Peminjaman_status.Size = New System.Drawing.Size(127, 21)
+        Me.ComboBox_Edit_Peminjaman_status.TabIndex = 32
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(19, 269)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(50, 13)
+        Me.Label18.TabIndex = 31
+        Me.Label18.Text = "STATUS"
         '
         'TextBox_Edit_Peminjaman_penerbit
         '
@@ -384,13 +448,6 @@ Partial Class Form_Peminjaman
         Me.Button_Edit_Peminjaman_New.Text = "BARU"
         Me.Button_Edit_Peminjaman_New.UseVisualStyleBackColor = True
         '
-        'TextBox_Edit_Peminjaman_id
-        '
-        Me.TextBox_Edit_Peminjaman_id.Location = New System.Drawing.Point(135, 32)
-        Me.TextBox_Edit_Peminjaman_id.Name = "TextBox_Edit_Peminjaman_id"
-        Me.TextBox_Edit_Peminjaman_id.Size = New System.Drawing.Size(127, 20)
-        Me.TextBox_Edit_Peminjaman_id.TabIndex = 7
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -436,55 +493,21 @@ Partial Class Form_Peminjaman
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "ID"
         '
-        'Label18
+        'Button_Peminjaman_Exit
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(19, 269)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(50, 13)
-        Me.Label18.TabIndex = 31
-        Me.Label18.Text = "STATUS"
-        '
-        'ComboBox_Edit_Peminjaman_status
-        '
-        Me.ComboBox_Edit_Peminjaman_status.FormattingEnabled = True
-        Me.ComboBox_Edit_Peminjaman_status.Location = New System.Drawing.Point(135, 266)
-        Me.ComboBox_Edit_Peminjaman_status.Name = "ComboBox_Edit_Peminjaman_status"
-        Me.ComboBox_Edit_Peminjaman_status.Size = New System.Drawing.Size(127, 21)
-        Me.ComboBox_Edit_Peminjaman_status.TabIndex = 32
-        '
-        'Button_Peminjam_Exit
-        '
-        Me.Button_Peminjam_Exit.Location = New System.Drawing.Point(366, 429)
-        Me.Button_Peminjam_Exit.Name = "Button_Peminjam_Exit"
-        Me.Button_Peminjam_Exit.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Peminjam_Exit.TabIndex = 32
-        Me.Button_Peminjam_Exit.Text = "EXIT"
-        Me.Button_Peminjam_Exit.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(19, 269)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(50, 13)
-        Me.Label19.TabIndex = 32
-        Me.Label19.Text = "STATUS"
-        '
-        'ComboBox_Add_Peminjaman_status
-        '
-        Me.ComboBox_Add_Peminjaman_status.FormattingEnabled = True
-        Me.ComboBox_Add_Peminjaman_status.Location = New System.Drawing.Point(135, 266)
-        Me.ComboBox_Add_Peminjaman_status.Name = "ComboBox_Add_Peminjaman_status"
-        Me.ComboBox_Add_Peminjaman_status.Size = New System.Drawing.Size(127, 21)
-        Me.ComboBox_Add_Peminjaman_status.TabIndex = 33
+        Me.Button_Peminjaman_Exit.Location = New System.Drawing.Point(366, 429)
+        Me.Button_Peminjaman_Exit.Name = "Button_Peminjaman_Exit"
+        Me.Button_Peminjaman_Exit.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Peminjaman_Exit.TabIndex = 32
+        Me.Button_Peminjaman_Exit.Text = "EXIT"
+        Me.Button_Peminjaman_Exit.UseVisualStyleBackColor = True
         '
         'Form_Peminjaman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 475)
-        Me.Controls.Add(Me.Button_Peminjam_Exit)
+        Me.Controls.Add(Me.Button_Peminjaman_Exit)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -534,13 +557,15 @@ Partial Class Form_Peminjaman
     Friend WithEvents Label12 As Label
     Friend WithEvents Button_Edit_Peminjaman_Update As Button
     Friend WithEvents Button_Edit_Peminjaman_New As Button
-    Friend WithEvents TextBox_Edit_Peminjaman_id As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Button_Peminjam_Exit As Button
+    Friend WithEvents Button_Peminjaman_Exit As Button
     Friend WithEvents ComboBox_Add_Peminjaman_status As ComboBox
     Friend WithEvents Label19 As Label
+    Friend WithEvents Button_Edit_Peminjaman_Delete As Button
+    Friend WithEvents Button_Edit_Peminjaman_Refresh As Button
+    Friend WithEvents ComboBox_Edit_Peminjaman_id As ComboBox
 End Class

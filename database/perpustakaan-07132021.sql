@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2021 at 07:13 PM
+-- Generation Time: Jul 13, 2021 at 09:50 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -37,6 +37,13 @@ CREATE TABLE `tbl_admin` (
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tbl_admin`
+--
+
+INSERT INTO `tbl_admin` (`id_admin`, `username`, `nama_admin`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `status`) VALUES
+(1, 'alyh', 'aliya', '12', '12', '12', '1');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +60,13 @@ CREATE TABLE `tbl_anggota` (
   `tahun_bergabung` varchar(4) NOT NULL,
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_anggota`
+--
+
+INSERT INTO `tbl_anggota` (`id_anggota`, `username`, `nama_anggota`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `tahun_bergabung`, `status`) VALUES
+(1, 'ricya', 'RICO YOGA', '12', '12', '12', '12', '1');
 
 -- --------------------------------------------------------
 
@@ -74,8 +88,10 @@ CREATE TABLE `tbl_buku` (
 --
 
 INSERT INTO `tbl_buku` (`id_buku`, `nama_buku`, `id_penulis`, `id_penerbit`, `tahun_terbit`, `status`) VALUES
-(1, '1', '123141', '12', '12', '1'),
-(12, '12', '123141', '12', '1', '1');
+(1, '1', '123141', '12', '121', '1'),
+(3, 'Konz', 'asd', 'dsa', 'qe', '1'),
+(12, '12', '123141', '12', '1', '1'),
+(312, 'MARMUT MERAH JAMBU', '123141', 'dsa', '2002', '1');
 
 -- --------------------------------------------------------
 
@@ -85,13 +101,14 @@ INSERT INTO `tbl_buku` (`id_buku`, `nama_buku`, `id_penulis`, `id_penerbit`, `ta
 
 CREATE TABLE `tbl_peminjaman` (
   `id_peminjaman` int(8) NOT NULL,
-  `id_anggota` int(8) NOT NULL,
-  `id_admin` int(8) NOT NULL,
-  `id_buku` int(8) NOT NULL,
-  `id_penulis` int(8) NOT NULL,
-  `id_penerbit` int(8) NOT NULL,
+  `id_anggota` varchar(255) NOT NULL,
+  `id_admin` varchar(255) NOT NULL,
+  `id_buku` varchar(255) NOT NULL,
+  `id_penulis` varchar(255) NOT NULL,
+  `id_penerbit` varchar(255) NOT NULL,
   `tanggal_pinjam` varchar(64) NOT NULL,
-  `tanggal_pengembalian` varchar(64) NOT NULL
+  `tanggal_pengembalian` varchar(64) NOT NULL,
+  `status` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -113,7 +130,8 @@ CREATE TABLE `tbl_penerbit` (
 --
 
 INSERT INTO `tbl_penerbit` (`id_penerbit`, `nama_penerbit`, `tahun_berdiri`, `no_hp`, `status`) VALUES
-(1, '12', '21', '12', '1');
+(1, '12', '21', '12', '1'),
+(2, 'dsa', '2020', '1234', '1');
 
 -- --------------------------------------------------------
 
@@ -135,7 +153,8 @@ CREATE TABLE `tbl_penulis` (
 --
 
 INSERT INTO `tbl_penulis` (`id_penulis`, `nama_penulis`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `status`) VALUES
-(1, '123141', '12', '12', '21', '12');
+(1, '123141', '12', '12', '21', '12'),
+(2, 'asd', '12', 'Tuesday, July 13, 2021', '12', '2');
 
 --
 -- Indexes for dumped tables
@@ -163,12 +182,7 @@ ALTER TABLE `tbl_buku`
 -- Indexes for table `tbl_peminjaman`
 --
 ALTER TABLE `tbl_peminjaman`
-  ADD PRIMARY KEY (`id_peminjaman`),
-  ADD KEY `id_anggota` (`id_anggota`),
-  ADD KEY `id_admin` (`id_admin`),
-  ADD KEY `id_buku` (`id_buku`),
-  ADD KEY `id_penulis` (`id_penulis`),
-  ADD KEY `id_penerbit` (`id_penerbit`);
+  ADD PRIMARY KEY (`id_peminjaman`);
 
 --
 -- Indexes for table `tbl_penerbit`
@@ -190,21 +204,7 @@ ALTER TABLE `tbl_penulis`
 -- AUTO_INCREMENT for table `tbl_peminjaman`
 --
 ALTER TABLE `tbl_peminjaman`
-  MODIFY `id_peminjaman` int(8) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tbl_peminjaman`
---
-ALTER TABLE `tbl_peminjaman`
-  ADD CONSTRAINT `tbl_peminjaman_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `tbl_admin` (`id_admin`),
-  ADD CONSTRAINT `tbl_peminjaman_ibfk_2` FOREIGN KEY (`id_penerbit`) REFERENCES `tbl_penerbit` (`id_penerbit`),
-  ADD CONSTRAINT `tbl_peminjaman_ibfk_3` FOREIGN KEY (`id_anggota`) REFERENCES `tbl_anggota` (`id_anggota`),
-  ADD CONSTRAINT `tbl_peminjaman_ibfk_4` FOREIGN KEY (`id_buku`) REFERENCES `tbl_buku` (`id_buku`),
-  ADD CONSTRAINT `tbl_peminjaman_ibfk_5` FOREIGN KEY (`id_penulis`) REFERENCES `tbl_penulis` (`id_penulis`);
+  MODIFY `id_peminjaman` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

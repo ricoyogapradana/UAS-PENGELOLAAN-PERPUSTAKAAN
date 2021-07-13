@@ -24,6 +24,7 @@ Public Class Form_Penerbit
     Private Sub Form_Penerbit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         koneksi()
         tampilPenerbit()
+        tampilDataPenerbit()
     End Sub
     'Tambah'
     Sub tambah()
@@ -48,9 +49,12 @@ Public Class Form_Penerbit
 
     Private Sub Button_Add_Penerbit_Add_Click(sender As Object, e As EventArgs) Handles Button_Add_Penerbit_Add.Click
         tambah()
+        resetAdd()
+        tampilDataPenerbit()
+        tampilPenerbit()
     End Sub
 
-    Private Sub Button_Add_Penerbit_New_Click(sender As Object, e As EventArgs) Handles Button_Add_Penerbit_New.Click
+    Sub resetAdd()
         TextBox_Add_Penerbit_id.Text = ""
         TextBox_Add_Penerbit_nama.Text = ""
         TextBox_Add_Penerbit_tahunBerdiri.Text = ""
@@ -91,9 +95,7 @@ Public Class Form_Penerbit
         End If
     End Sub
 
-
-
-    Private Sub Button_Edit_Penerbit_New_Click(sender As Object, e As EventArgs) Handles Button_Edit_Penerbit_New.Click
+    Sub resetEdit()
         ComboBox_Edit_Penerbit_id.Text = ""
         TextBox_Edit_Penerbit_nama.Text = ""
         TextBox_Edit_Penerbit_tahunBerdiri.Text = ""
@@ -103,19 +105,36 @@ Public Class Form_Penerbit
 
     Private Sub Button_Edit_Penerbit_Update_Click(sender As Object, e As EventArgs) Handles Button_Edit_Penerbit_Update.Click
         edit()
+        tampilPenerbit()
+        tampilDataPenerbit()
     End Sub
-
 
     'Form Penerbit'
     Private Sub Button_Penerbit_Exit_Click(sender As Object, e As EventArgs) Handles Button_Penerbit_Exit.Click
         Close()
     End Sub
 
-    Private Sub Button_Edit_Penerbit_Refresh_Click(sender As Object, e As EventArgs) Handles Button_Edit_Penerbit_Refresh.Click
-        tampilPenerbit()
-    End Sub
-
     Private Sub Button_Edit_Penerbit_Delete_Click(sender As Object, e As EventArgs) Handles Button_Edit_Penerbit_Delete.Click
         delete()
+        resetEdit()
+        tampilPenerbit()
+        tampilDataPenerbit()
     End Sub
+
+    Sub tampilDataPenerbit()
+        DataGridView_DataPenerbit.Rows.Clear()
+        Try
+            koneksi()
+            da = New OdbcDataAdapter("select *from tbl_penerbit order by id_penerbit asc", con)
+            dt = New DataTable
+            da.Fill(dt)
+            For Each row In dt.Rows
+                DataGridView_DataPenerbit.Rows.Add(row(0), row(1), row(2), row(3), row(4))
+            Next
+            dt.Rows.Clear()
+        Catch ex As Exception
+            MsgBox("Menampilkan data GAGAL")
+        End Try
+    End Sub
+
 End Class

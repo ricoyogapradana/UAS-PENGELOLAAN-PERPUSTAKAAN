@@ -26,7 +26,6 @@ Partial Class Form_Penerbit
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox_Add_Penerbit_status = New System.Windows.Forms.ComboBox()
         Me.Button_Add_Penerbit_Add = New System.Windows.Forms.Button()
-        Me.Button_Add_Penerbit_New = New System.Windows.Forms.Button()
         Me.TextBox_Add_Penerbit_noHp = New System.Windows.Forms.TextBox()
         Me.TextBox_Add_Penerbit_tahunBerdiri = New System.Windows.Forms.TextBox()
         Me.TextBox_Add_Penerbit_nama = New System.Windows.Forms.TextBox()
@@ -38,11 +37,9 @@ Partial Class Form_Penerbit
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button_Edit_Penerbit_Delete = New System.Windows.Forms.Button()
-        Me.Button_Edit_Penerbit_Refresh = New System.Windows.Forms.Button()
         Me.ComboBox_Edit_Penerbit_id = New System.Windows.Forms.ComboBox()
         Me.ComboBox_Edit_Penerbit_status = New System.Windows.Forms.ComboBox()
         Me.Button_Edit_Penerbit_Update = New System.Windows.Forms.Button()
-        Me.Button_Edit_Penerbit_New = New System.Windows.Forms.Button()
         Me.TextBox_Edit_Penerbit_noHp = New System.Windows.Forms.TextBox()
         Me.TextBox_Edit_Penerbit_tahunBerdiri = New System.Windows.Forms.TextBox()
         Me.TextBox_Edit_Penerbit_nama = New System.Windows.Forms.TextBox()
@@ -52,8 +49,17 @@ Partial Class Form_Penerbit
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button_Penerbit_Exit = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView_DataPenerbit = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView_DataPenerbit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -70,7 +76,6 @@ Partial Class Form_Penerbit
         '
         Me.GroupBox1.Controls.Add(Me.ComboBox_Add_Penerbit_status)
         Me.GroupBox1.Controls.Add(Me.Button_Add_Penerbit_Add)
-        Me.GroupBox1.Controls.Add(Me.Button_Add_Penerbit_New)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Penerbit_noHp)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Penerbit_tahunBerdiri)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Penerbit_nama)
@@ -103,15 +108,6 @@ Partial Class Form_Penerbit
         Me.Button_Add_Penerbit_Add.TabIndex = 15
         Me.Button_Add_Penerbit_Add.Text = "TAMBAH"
         Me.Button_Add_Penerbit_Add.UseVisualStyleBackColor = True
-        '
-        'Button_Add_Penerbit_New
-        '
-        Me.Button_Add_Penerbit_New.Location = New System.Drawing.Point(21, 174)
-        Me.Button_Add_Penerbit_New.Name = "Button_Add_Penerbit_New"
-        Me.Button_Add_Penerbit_New.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Add_Penerbit_New.TabIndex = 14
-        Me.Button_Add_Penerbit_New.Text = "BARU"
-        Me.Button_Add_Penerbit_New.UseVisualStyleBackColor = True
         '
         'TextBox_Add_Penerbit_noHp
         '
@@ -189,11 +185,9 @@ Partial Class Form_Penerbit
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Penerbit_Delete)
-        Me.GroupBox2.Controls.Add(Me.Button_Edit_Penerbit_Refresh)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Penerbit_id)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Penerbit_status)
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Penerbit_Update)
-        Me.GroupBox2.Controls.Add(Me.Button_Edit_Penerbit_New)
         Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Penerbit_noHp)
         Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Penerbit_tahunBerdiri)
         Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Penerbit_nama)
@@ -211,21 +205,12 @@ Partial Class Form_Penerbit
         '
         'Button_Edit_Penerbit_Delete
         '
-        Me.Button_Edit_Penerbit_Delete.Location = New System.Drawing.Point(112, 174)
+        Me.Button_Edit_Penerbit_Delete.Location = New System.Drawing.Point(191, 174)
         Me.Button_Edit_Penerbit_Delete.Name = "Button_Edit_Penerbit_Delete"
         Me.Button_Edit_Penerbit_Delete.Size = New System.Drawing.Size(75, 23)
         Me.Button_Edit_Penerbit_Delete.TabIndex = 27
         Me.Button_Edit_Penerbit_Delete.Text = "DELETE"
         Me.Button_Edit_Penerbit_Delete.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Penerbit_Refresh
-        '
-        Me.Button_Edit_Penerbit_Refresh.Location = New System.Drawing.Point(193, 174)
-        Me.Button_Edit_Penerbit_Refresh.Name = "Button_Edit_Penerbit_Refresh"
-        Me.Button_Edit_Penerbit_Refresh.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Penerbit_Refresh.TabIndex = 26
-        Me.Button_Edit_Penerbit_Refresh.Text = "REFRESH"
-        Me.Button_Edit_Penerbit_Refresh.UseVisualStyleBackColor = True
         '
         'ComboBox_Edit_Penerbit_id
         '
@@ -251,15 +236,6 @@ Partial Class Form_Penerbit
         Me.Button_Edit_Penerbit_Update.TabIndex = 15
         Me.Button_Edit_Penerbit_Update.Text = "UPDATE"
         Me.Button_Edit_Penerbit_Update.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Penerbit_New
-        '
-        Me.Button_Edit_Penerbit_New.Location = New System.Drawing.Point(21, 174)
-        Me.Button_Edit_Penerbit_New.Name = "Button_Edit_Penerbit_New"
-        Me.Button_Edit_Penerbit_New.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Penerbit_New.TabIndex = 14
-        Me.Button_Edit_Penerbit_New.Text = "BARU"
-        Me.Button_Edit_Penerbit_New.UseVisualStyleBackColor = True
         '
         'TextBox_Edit_Penerbit_noHp
         '
@@ -329,18 +305,63 @@ Partial Class Form_Penerbit
         '
         'Button_Penerbit_Exit
         '
-        Me.Button_Penerbit_Exit.Location = New System.Drawing.Point(366, 318)
+        Me.Button_Penerbit_Exit.Location = New System.Drawing.Point(688, 528)
         Me.Button_Penerbit_Exit.Name = "Button_Penerbit_Exit"
         Me.Button_Penerbit_Exit.Size = New System.Drawing.Size(75, 23)
         Me.Button_Penerbit_Exit.TabIndex = 23
         Me.Button_Penerbit_Exit.Text = "EXIT"
         Me.Button_Penerbit_Exit.UseVisualStyleBackColor = True
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.DataGridView_DataPenerbit)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 305)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(780, 217)
+        Me.GroupBox3.TabIndex = 26
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "DATA PENERBIT"
+        '
+        'DataGridView_DataPenerbit
+        '
+        Me.DataGridView_DataPenerbit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView_DataPenerbit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.DataGridView_DataPenerbit.Location = New System.Drawing.Point(12, 19)
+        Me.DataGridView_DataPenerbit.Name = "DataGridView_DataPenerbit"
+        Me.DataGridView_DataPenerbit.Size = New System.Drawing.Size(747, 177)
+        Me.DataGridView_DataPenerbit.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "NAMA"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "TAHUN BERDIRI"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "NO HP"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "STATUS"
+        Me.Column5.Name = "Column5"
+        '
         'Form_Penerbit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 353)
+        Me.ClientSize = New System.Drawing.Size(800, 571)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Button_Penerbit_Exit)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -351,6 +372,8 @@ Partial Class Form_Penerbit
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView_DataPenerbit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -360,7 +383,6 @@ Partial Class Form_Penerbit
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ComboBox_Add_Penerbit_status As ComboBox
     Friend WithEvents Button_Add_Penerbit_Add As Button
-    Friend WithEvents Button_Add_Penerbit_New As Button
     Friend WithEvents TextBox_Add_Penerbit_noHp As TextBox
     Friend WithEvents TextBox_Add_Penerbit_tahunBerdiri As TextBox
     Friend WithEvents TextBox_Add_Penerbit_nama As TextBox
@@ -373,7 +395,6 @@ Partial Class Form_Penerbit
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents ComboBox_Edit_Penerbit_status As ComboBox
     Friend WithEvents Button_Edit_Penerbit_Update As Button
-    Friend WithEvents Button_Edit_Penerbit_New As Button
     Friend WithEvents TextBox_Edit_Penerbit_noHp As TextBox
     Friend WithEvents TextBox_Edit_Penerbit_tahunBerdiri As TextBox
     Friend WithEvents TextBox_Edit_Penerbit_nama As TextBox
@@ -384,6 +405,12 @@ Partial Class Form_Penerbit
     Friend WithEvents Label11 As Label
     Friend WithEvents ComboBox_Edit_Penerbit_id As ComboBox
     Friend WithEvents Button_Penerbit_Exit As Button
-    Friend WithEvents Button_Edit_Penerbit_Refresh As Button
     Friend WithEvents Button_Edit_Penerbit_Delete As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DataGridView_DataPenerbit As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

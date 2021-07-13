@@ -1,16 +1,75 @@
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.exe
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.pdb
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\WindowsApp_Perpustakaan.xml
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbprojAssemblyReference.cache
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Admin.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Anggota.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Resources.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbproj.GenerateResource.cache
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbproj.CoreCompileInputs.cache
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.exe
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.xml
-C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.pdb
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Buku.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Peminjaman.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Penerbit.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_Penulis.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.vbproj.CopyComplete
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\EnvDTE.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\stdole.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\PENGELOLAAN PERPUSTAKAAN.exe.config
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\PENGELOLAAN PERPUSTAKAAN.exe
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\PENGELOLAAN PERPUSTAKAAN.pdb
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\bin\Debug\PENGELOLAAN PERPUSTAKAAN.xml
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\PENGELOLAAN PERPUSTAKAAN.exe
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\PENGELOLAAN PERPUSTAKAAN.xml
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\PENGELOLAAN PERPUSTAKAAN.pdb
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Transaksi_Peminjaman.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\RdlCompile.cache
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\RdlCompile.compiled

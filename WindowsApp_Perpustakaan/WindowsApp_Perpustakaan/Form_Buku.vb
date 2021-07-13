@@ -21,6 +21,22 @@ Public Class Form_Buku
         Loop
     End Sub
 
+    Sub tampilDataBuku()
+        DataGridView_DataBuku.Rows.Clear()
+        Try
+            koneksi()
+            da = New OdbcDataAdapter("select *from tbl_buku order by id_buku asc", con)
+            dt = New DataTable
+            da.Fill(dt)
+            For Each row In dt.Rows
+                DataGridView_DataBuku.Rows.Add(row(0), row(1), row(2), row(3), row(4), row(5))
+            Next
+            dt.Rows.Clear()
+        Catch ex As Exception
+            MsgBox("Menampilkan data GAGAL")
+        End Try
+    End Sub
+
     Sub tampilPenulis()
         cmd = New OdbcCommand("select nama_penulis from tbl_penulis ", con)
         dr = cmd.ExecuteReader
@@ -47,6 +63,7 @@ Public Class Form_Buku
         tampilbuku()
         tampilPenulis()
         tampilPenerbit()
+        tampilDataBuku()
     End Sub
 
     'Tambah'
@@ -72,9 +89,12 @@ Public Class Form_Buku
 
     Private Sub Button_Add_buku_Add_Click(sender As Object, e As EventArgs) Handles Button_Add_Buku_Add.Click
         tambah()
+        resetTambah()
+        tampilbuku()
+        tampilDataBuku()
     End Sub
 
-    Private Sub Button_Add_buku_New_Click(sender As Object, e As EventArgs) Handles Button_Add_Buku_New.Click
+    Sub resetTambah()
         TextBox_Add_Buku_id.Text = ""
         TextBox_Add_Buku_nama.Text = ""
         ComboBox_Add_Buku_penulis.Text = ""
@@ -118,18 +138,21 @@ Public Class Form_Buku
     End Sub
 
 
-
-    Private Sub Button_Edit_buku_New_Click(sender As Object, e As EventArgs) Handles Button_Edit_Buku_New.Click
-        ComboBox_Edit_buku_id.Text = ""
+    Sub resetEdit()
+        ComboBox_Edit_Buku_id.Text = ""
         TextBox_Edit_Buku_nama.Text = ""
         ComboBox_Edit_Buku_penulis.Text = ""
         ComboBox_Edit_Buku_penerbit.Text = ""
         TextBox_Edit_Buku_tahunTerbit.Text = ""
         ComboBox_Edit_Buku_status.Text = ""
     End Sub
+    Private Sub Button_Edit_buku_New_Click(sender As Object, e As EventArgs)
+
+    End Sub
 
     Private Sub Button_Edit_buku_Update_Click(sender As Object, e As EventArgs) Handles Button_Edit_Buku_Update.Click
         edit()
+        tampilDataBuku()
     End Sub
 
 
@@ -138,11 +161,10 @@ Public Class Form_Buku
         Close()
     End Sub
 
-    Private Sub Button_Edit_buku_Refresh_Click(sender As Object, e As EventArgs) Handles Button_Edit_Buku_Refresh.Click
-        tampilbuku()
-    End Sub
-
     Private Sub Button_Edit_buku_Delete_Click(sender As Object, e As EventArgs) Handles Button_Edit_Buku_Delete.Click
         delete()
+        tampilbuku()
+        resetEdit()
+        tampilDataBuku()
     End Sub
 End Class

@@ -58,11 +58,12 @@ Public Class Form_Peminjaman
         tampilPeminjam()
         tampilAdmin()
         tampilBuku()
+        tampilDataPeminjaman()
     End Sub
 
     'Tambah'
     Sub tambah()
-        If TextBox_Add_Peminjaman_id.Text = "" Or ComboBox_Add_Peminjaman_namaPeminjam.Text = "" Or ComboBox_Add_Peminjaman_namaAdmin.Text = "" Or ComboBox_Add_Peminjaman_idBuku.Text = "" Or TextBox_Add_Peminjaman_penulis.Text = "" Or TextBox_Add_Peminjaman_penerbit.Text = "" Or DateTimePicker_Add_Peminjaman_tanggalPinjam.Text = "" Or DateTimePicker_Add_Peminjaman_tanggalPengembalian.Text = "" Or ComboBox_Add_Peminjaman_status.Text = "" Then
+        If TextBox_Add_Peminjaman_id.Text = "" Or ComboBox_Add_Peminjaman_namaPeminjam.Text = "" Or ComboBox_Add_Peminjaman_namaAdmin.Text = "" Or ComboBox_Add_Peminjaman_idBuku.Text = "" Or TextBox_Add_Peminjaman_namaBuku.Text = "" Or TextBox_Add_Peminjaman_penulis.Text = "" Or TextBox_Add_Peminjaman_penerbit.Text = "" Or DateTimePicker_Add_Peminjaman_tanggalPinjam.Text = "" Or DateTimePicker_Add_Peminjaman_tanggalPengembalian.Text = "" Or ComboBox_Add_Peminjaman_status.Text = "" Then
             MsgBox("Tolong isi semua form yang telah disediakan")
         Else
             koneksi()
@@ -73,7 +74,7 @@ Public Class Form_Peminjaman
                 MsgBox("Data peminjaman gagal disimpan (ID Sudah Pernah diinput)")
             Else
                 koneksi()
-                Dim sql As String = "insert into tbl_peminjaman values('" & TextBox_Add_Peminjaman_id.Text & "', '" & ComboBox_Add_Peminjaman_namaPeminjam.Text & "','" & ComboBox_Add_Peminjaman_namaAdmin.Text & "', '" & ComboBox_Add_Peminjaman_idBuku.Text & "', '" & TextBox_Add_Peminjaman_penulis.Text & "' , '" & TextBox_Add_Peminjaman_penerbit.Text & "' , '" & DateTimePicker_Add_Peminjaman_tanggalPinjam.Text & "' , '" & DateTimePicker_Add_Peminjaman_tanggalPengembalian.Text & "', '" & ComboBox_Add_Peminjaman_status.Text & "')"
+                Dim sql As String = "insert into tbl_peminjaman values('" & TextBox_Add_Peminjaman_id.Text & "', '" & ComboBox_Add_Peminjaman_namaPeminjam.Text & "','" & ComboBox_Add_Peminjaman_namaAdmin.Text & "', '" & ComboBox_Add_Peminjaman_idBuku.Text & "', '" & TextBox_Add_Peminjaman_namaBuku.Text & "','" & TextBox_Add_Peminjaman_penulis.Text & "' , '" & TextBox_Add_Peminjaman_penerbit.Text & "' , '" & DateTimePicker_Add_Peminjaman_tanggalPinjam.Text & "' , '" & DateTimePicker_Add_Peminjaman_tanggalPengembalian.Text & "', '" & ComboBox_Add_Peminjaman_status.Text & "')"
                 cmd = New OdbcCommand(sql, con)
                 cmd.ExecuteNonQuery()
                 MsgBox("Menyimpan data BERHASIL", vbInformation, "INFORMASI")
@@ -83,13 +84,18 @@ Public Class Form_Peminjaman
 
     Private Sub Button_Add_peminjaman_Add_Click(sender As Object, e As EventArgs) Handles Button_Add_Peminjaman_Add.Click
         tambah()
+        tampilpeminjaman()
+        tampilDataPeminjaman()
+        Transaksi_Peminjaman.Show()
+        resetAdd()
     End Sub
 
-    Private Sub Button_Add_peminjaman_New_Click(sender As Object, e As EventArgs) Handles Button_Add_Peminjaman_New.Click
+    Sub resetAdd()
         TextBox_Add_Peminjaman_id.Text = ""
         ComboBox_Add_Peminjaman_namaPeminjam.Text = ""
         ComboBox_Add_Peminjaman_namaAdmin.Text = ""
         ComboBox_Add_Peminjaman_idBuku.Text = ""
+        TextBox_Add_Peminjaman_namaBuku.Text = ""
         TextBox_Add_Peminjaman_penulis.Text = ""
         TextBox_Add_Peminjaman_penerbit.Text = ""
         DateTimePicker_Add_Peminjaman_tanggalPinjam.Text = ""
@@ -110,7 +116,7 @@ Public Class Form_Peminjaman
     'Edit'
     Sub edit()
         koneksi()
-        Dim update As String = "update tbl_peminjaman set id_anggota ='" & ComboBox_Edit_Peminjaman_namaPeminjam.Text & "', id_admin = '" & ComboBox_Edit_Peminjaman_namaAdmin.Text & "', id_buku = '" & ComboBox_Edit_Peminjaman_idBuku.Text & "', id_penulis = '" & TextBox_Edit_Peminjaman_penulis.Text & "' , id_penerbit = '" & TextBox_Edit_Peminjaman_penerbit.Text & "' , tanggal_pinjam = '" & DateTimePicker_Edit_Peminjaman_tanggalPinjam.Text & "' , tanggal_pengembalian = '" & DateTimePicker_Edit_Peminjaman_tanggalPengembalian.Text & "' , status = '" & ComboBox_Edit_Peminjaman_status.Text & "' WHERE id_peminjaman = '" & ComboBox_Edit_Peminjaman_id.Text & "'"
+        Dim update As String = "update tbl_peminjaman set id_anggota ='" & ComboBox_Edit_Peminjaman_namaPeminjam.Text & "', id_admin = '" & ComboBox_Edit_Peminjaman_namaAdmin.Text & "', id_buku = '" & ComboBox_Edit_Peminjaman_idBuku.Text & "', nama_buku = '" & TextBox_Edit_Peminjaman_namaBuku.Text & "', id_penulis = '" & TextBox_Edit_Peminjaman_penulis.Text & "' , id_penerbit = '" & TextBox_Edit_Peminjaman_penerbit.Text & "' , tanggal_pinjam = '" & DateTimePicker_Edit_Peminjaman_tanggalPinjam.Text & "' , tanggal_pengembalian = '" & DateTimePicker_Edit_Peminjaman_tanggalPengembalian.Text & "' , status = '" & ComboBox_Edit_Peminjaman_status.Text & "' WHERE id_peminjaman = '" & ComboBox_Edit_Peminjaman_id.Text & "'"
         cmd = New OdbcCommand(update, con)
         cmd.ExecuteNonQuery()
         MsgBox("Update data BERHASIL", vbInformation, "INFORMASI")
@@ -124,6 +130,7 @@ Public Class Form_Peminjaman
             ComboBox_Edit_Peminjaman_namaPeminjam.Text = dr.Item("id_anggota")
             ComboBox_Edit_Peminjaman_namaAdmin.Text = dr.Item("id_admin")
             ComboBox_Edit_Peminjaman_idBuku.Text = dr.Item("id_buku")
+            TextBox_Edit_Peminjaman_namaBuku.Text = dr.Item("nama_buku")
             TextBox_Edit_Peminjaman_penulis.Text = dr.Item("id_penulis")
             TextBox_Edit_Peminjaman_penerbit.Text = dr.Item("id_penerbit")
             DateTimePicker_Edit_Peminjaman_tanggalPinjam.Text = dr.Item("tanggal_pinjam")
@@ -134,13 +141,12 @@ Public Class Form_Peminjaman
         End If
     End Sub
 
-
-
-    Private Sub Button_Edit_peminjaman_New_Click(sender As Object, e As EventArgs) Handles Button_Edit_Peminjaman_New.Click
-        ComboBox_Edit_peminjaman_id.Text = ""
+    Sub resetEdit()
+        ComboBox_Edit_Peminjaman_id.Text = ""
         ComboBox_Edit_Peminjaman_namaPeminjam.Text = ""
         ComboBox_Edit_Peminjaman_namaAdmin.Text = ""
         ComboBox_Edit_Peminjaman_idBuku.Text = ""
+        TextBox_Edit_Peminjaman_namaBuku.Text = ""
         TextBox_Edit_Peminjaman_penulis.Text = ""
         TextBox_Edit_Peminjaman_penerbit.Text = ""
         DateTimePicker_Edit_Peminjaman_tanggalPinjam.Text = ""
@@ -150,6 +156,9 @@ Public Class Form_Peminjaman
 
     Private Sub Button_Edit_peminjaman_Update_Click(sender As Object, e As EventArgs) Handles Button_Edit_Peminjaman_Update.Click
         edit()
+        resetEdit()
+        tampilDataPeminjaman()
+        tampilpeminjaman()
     End Sub
 
 
@@ -158,12 +167,12 @@ Public Class Form_Peminjaman
         Close()
     End Sub
 
-    Private Sub Button_Edit_peminjaman_Refresh_Click(sender As Object, e As EventArgs) Handles Button_Edit_Peminjaman_Refresh.Click
-        tampilpeminjaman()
-    End Sub
-
     Private Sub Button_Edit_peminjaman_Delete_Click(sender As Object, e As EventArgs) Handles Button_Edit_Peminjaman_Delete.Click
         delete()
+        tampilpeminjaman()
+        resetEdit()
+        tampilDataPeminjaman()
+
     End Sub
 
     Private Sub ComboBox_Add_Peminjaman_idBuku_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_Add_Peminjaman_idBuku.SelectedIndexChanged
@@ -171,11 +180,27 @@ Public Class Form_Peminjaman
         dr = cmd.ExecuteReader
         dr.Read()
         If dr.HasRows Then
-
+            TextBox_Add_Peminjaman_namaBuku.Text = dr.Item("nama_buku")
             TextBox_Add_Peminjaman_penulis.Text = dr.Item("id_penulis")
             TextBox_Add_Peminjaman_penerbit.Text = dr.Item("id_penerbit")
         Else
             MsgBox("ID tidak ada")
         End If
+    End Sub
+
+    Sub tampilDataPeminjaman()
+        DataGridView_DataPeminjaman.Rows.Clear()
+        Try
+            koneksi()
+            da = New OdbcDataAdapter("select *from tbl_peminjaman order by id_peminjaman asc", con)
+            dt = New DataTable
+            da.Fill(dt)
+            For Each row In dt.Rows
+                DataGridView_DataPeminjaman.Rows.Add(row(0), row(1), row(2), row(3), row(4), row(5), row(6), row(7), row(8), row(9))
+            Next
+            dt.Rows.Clear()
+        Catch ex As Exception
+            MsgBox("Menampilkan data GAGAL")
+        End Try
     End Sub
 End Class

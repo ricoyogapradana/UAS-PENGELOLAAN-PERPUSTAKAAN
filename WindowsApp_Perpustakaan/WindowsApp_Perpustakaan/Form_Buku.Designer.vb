@@ -30,7 +30,6 @@ Partial Class Form_Buku
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox_Add_Buku_status = New System.Windows.Forms.ComboBox()
         Me.Button_Add_Buku_Add = New System.Windows.Forms.Button()
-        Me.Button_Add_Buku_New = New System.Windows.Forms.Button()
         Me.TextBox_Add_Buku_nama = New System.Windows.Forms.TextBox()
         Me.TextBox_Add_Buku_id = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -39,7 +38,7 @@ Partial Class Form_Buku
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button_Edit_Buku_Refresh = New System.Windows.Forms.Button()
+        Me.ComboBox_Edit_Buku_id = New System.Windows.Forms.ComboBox()
         Me.Button_Edit_Buku_Delete = New System.Windows.Forms.Button()
         Me.ComboBox_Edit_Buku_penerbit = New System.Windows.Forms.ComboBox()
         Me.ComboBox_Edit_Buku_penulis = New System.Windows.Forms.ComboBox()
@@ -47,7 +46,6 @@ Partial Class Form_Buku
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ComboBox_Edit_Buku_status = New System.Windows.Forms.ComboBox()
         Me.Button_Edit_Buku_Update = New System.Windows.Forms.Button()
-        Me.Button_Edit_Buku_New = New System.Windows.Forms.Button()
         Me.TextBox_Edit_Buku_nama = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -55,9 +53,18 @@ Partial Class Form_Buku
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button_Buku_Exit = New System.Windows.Forms.Button()
-        Me.ComboBox_Edit_Buku_id = New System.Windows.Forms.ComboBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView_DataBuku = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DataGridView_DataBuku, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -78,7 +85,6 @@ Partial Class Form_Buku
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.ComboBox_Add_Buku_status)
         Me.GroupBox1.Controls.Add(Me.Button_Add_Buku_Add)
-        Me.GroupBox1.Controls.Add(Me.Button_Add_Buku_New)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Buku_nama)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Buku_id)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -128,6 +134,7 @@ Partial Class Form_Buku
         'ComboBox_Add_Buku_status
         '
         Me.ComboBox_Add_Buku_status.FormattingEnabled = True
+        Me.ComboBox_Add_Buku_status.Items.AddRange(New Object() {"PEMBELAJARAN", "EKONOMI", "PERTANIAN", "KEHUTANAN", "TEKNOLOGI"})
         Me.ComboBox_Add_Buku_status.Location = New System.Drawing.Point(135, 161)
         Me.ComboBox_Add_Buku_status.Name = "ComboBox_Add_Buku_status"
         Me.ComboBox_Add_Buku_status.Size = New System.Drawing.Size(117, 21)
@@ -141,15 +148,6 @@ Partial Class Form_Buku
         Me.Button_Add_Buku_Add.TabIndex = 15
         Me.Button_Add_Buku_Add.Text = "TAMBAH"
         Me.Button_Add_Buku_Add.UseVisualStyleBackColor = True
-        '
-        'Button_Add_Buku_New
-        '
-        Me.Button_Add_Buku_New.Location = New System.Drawing.Point(21, 209)
-        Me.Button_Add_Buku_New.Name = "Button_Add_Buku_New"
-        Me.Button_Add_Buku_New.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Add_Buku_New.TabIndex = 14
-        Me.Button_Add_Buku_New.Text = "BARU"
-        Me.Button_Add_Buku_New.UseVisualStyleBackColor = True
         '
         'TextBox_Add_Buku_nama
         '
@@ -170,9 +168,9 @@ Partial Class Form_Buku
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(18, 164)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 13)
+        Me.Label8.Size = New System.Drawing.Size(37, 13)
         Me.Label8.TabIndex = 6
-        Me.Label8.Text = "STATUS"
+        Me.Label8.Text = "TEMA"
         '
         'Label7
         '
@@ -213,7 +211,6 @@ Partial Class Form_Buku
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Buku_id)
-        Me.GroupBox2.Controls.Add(Me.Button_Edit_Buku_Refresh)
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Buku_Delete)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Buku_penerbit)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Buku_penulis)
@@ -221,7 +218,6 @@ Partial Class Form_Buku
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.ComboBox_Edit_Buku_status)
         Me.GroupBox2.Controls.Add(Me.Button_Edit_Buku_Update)
-        Me.GroupBox2.Controls.Add(Me.Button_Edit_Buku_New)
         Me.GroupBox2.Controls.Add(Me.TextBox_Edit_Buku_nama)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -235,18 +231,17 @@ Partial Class Form_Buku
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "EDIT BUKU"
         '
-        'Button_Edit_Buku_Refresh
+        'ComboBox_Edit_Buku_id
         '
-        Me.Button_Edit_Buku_Refresh.Location = New System.Drawing.Point(191, 209)
-        Me.Button_Edit_Buku_Refresh.Name = "Button_Edit_Buku_Refresh"
-        Me.Button_Edit_Buku_Refresh.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Buku_Refresh.TabIndex = 30
-        Me.Button_Edit_Buku_Refresh.Text = "REFRESH"
-        Me.Button_Edit_Buku_Refresh.UseVisualStyleBackColor = True
+        Me.ComboBox_Edit_Buku_id.FormattingEnabled = True
+        Me.ComboBox_Edit_Buku_id.Location = New System.Drawing.Point(135, 32)
+        Me.ComboBox_Edit_Buku_id.Name = "ComboBox_Edit_Buku_id"
+        Me.ComboBox_Edit_Buku_id.Size = New System.Drawing.Size(117, 21)
+        Me.ComboBox_Edit_Buku_id.TabIndex = 31
         '
         'Button_Edit_Buku_Delete
         '
-        Me.Button_Edit_Buku_Delete.Location = New System.Drawing.Point(102, 209)
+        Me.Button_Edit_Buku_Delete.Location = New System.Drawing.Point(191, 209)
         Me.Button_Edit_Buku_Delete.Name = "Button_Edit_Buku_Delete"
         Me.Button_Edit_Buku_Delete.Size = New System.Drawing.Size(75, 23)
         Me.Button_Edit_Buku_Delete.TabIndex = 29
@@ -288,6 +283,7 @@ Partial Class Form_Buku
         'ComboBox_Edit_Buku_status
         '
         Me.ComboBox_Edit_Buku_status.FormattingEnabled = True
+        Me.ComboBox_Edit_Buku_status.Items.AddRange(New Object() {"PEMBELAJARAN", "EKONOMI", "PERTANIAN", "KEHUTANAN", "TEKNOLOGI"})
         Me.ComboBox_Edit_Buku_status.Location = New System.Drawing.Point(135, 161)
         Me.ComboBox_Edit_Buku_status.Name = "ComboBox_Edit_Buku_status"
         Me.ComboBox_Edit_Buku_status.Size = New System.Drawing.Size(117, 21)
@@ -302,15 +298,6 @@ Partial Class Form_Buku
         Me.Button_Edit_Buku_Update.Text = "UPDATE"
         Me.Button_Edit_Buku_Update.UseVisualStyleBackColor = True
         '
-        'Button_Edit_Buku_New
-        '
-        Me.Button_Edit_Buku_New.Location = New System.Drawing.Point(21, 209)
-        Me.Button_Edit_Buku_New.Name = "Button_Edit_Buku_New"
-        Me.Button_Edit_Buku_New.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Buku_New.TabIndex = 14
-        Me.Button_Edit_Buku_New.Text = "BARU"
-        Me.Button_Edit_Buku_New.UseVisualStyleBackColor = True
-        '
         'TextBox_Edit_Buku_nama
         '
         Me.TextBox_Edit_Buku_nama.Location = New System.Drawing.Point(135, 57)
@@ -323,9 +310,9 @@ Partial Class Form_Buku
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(18, 164)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(50, 13)
+        Me.Label9.Size = New System.Drawing.Size(37, 13)
         Me.Label9.TabIndex = 6
-        Me.Label9.Text = "STATUS"
+        Me.Label9.Text = "TEMA"
         '
         'Label10
         '
@@ -365,26 +352,68 @@ Partial Class Form_Buku
         '
         'Button_Buku_Exit
         '
-        Me.Button_Buku_Exit.Location = New System.Drawing.Point(366, 375)
+        Me.Button_Buku_Exit.Location = New System.Drawing.Point(713, 586)
         Me.Button_Buku_Exit.Name = "Button_Buku_Exit"
         Me.Button_Buku_Exit.Size = New System.Drawing.Size(75, 23)
         Me.Button_Buku_Exit.TabIndex = 24
         Me.Button_Buku_Exit.Text = "EXIT"
         Me.Button_Buku_Exit.UseVisualStyleBackColor = True
         '
-        'ComboBox_Edit_Buku_id
+        'GroupBox3
         '
-        Me.ComboBox_Edit_Buku_id.FormattingEnabled = True
-        Me.ComboBox_Edit_Buku_id.Location = New System.Drawing.Point(135, 32)
-        Me.ComboBox_Edit_Buku_id.Name = "ComboBox_Edit_Buku_id"
-        Me.ComboBox_Edit_Buku_id.Size = New System.Drawing.Size(117, 21)
-        Me.ComboBox_Edit_Buku_id.TabIndex = 31
+        Me.GroupBox3.Controls.Add(Me.DataGridView_DataBuku)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 363)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(780, 217)
+        Me.GroupBox3.TabIndex = 25
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "DATA BUKU"
+        '
+        'DataGridView_DataBuku
+        '
+        Me.DataGridView_DataBuku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView_DataBuku.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.DataGridView_DataBuku.Location = New System.Drawing.Point(12, 19)
+        Me.DataGridView_DataBuku.Name = "DataGridView_DataBuku"
+        Me.DataGridView_DataBuku.Size = New System.Drawing.Size(747, 177)
+        Me.DataGridView_DataBuku.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "NAMA"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "PENULIS"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "PENERBIT"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "TAHUN TERBIT"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "TEMA"
+        Me.Column6.Name = "Column6"
         '
         'Form_Buku
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 423)
+        Me.ClientSize = New System.Drawing.Size(800, 626)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.Button_Buku_Exit)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -395,6 +424,8 @@ Partial Class Form_Buku
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DataGridView_DataBuku, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -404,7 +435,6 @@ Partial Class Form_Buku
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ComboBox_Add_Buku_status As ComboBox
     Friend WithEvents Button_Add_Buku_Add As Button
-    Friend WithEvents Button_Add_Buku_New As Button
     Friend WithEvents TextBox_Add_Buku_nama As TextBox
     Friend WithEvents TextBox_Add_Buku_id As TextBox
     Friend WithEvents Label8 As Label
@@ -423,7 +453,6 @@ Partial Class Form_Buku
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox_Edit_Buku_status As ComboBox
     Friend WithEvents Button_Edit_Buku_Update As Button
-    Friend WithEvents Button_Edit_Buku_New As Button
     Friend WithEvents TextBox_Edit_Buku_nama As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
@@ -432,6 +461,13 @@ Partial Class Form_Buku
     Friend WithEvents Label13 As Label
     Friend WithEvents Button_Buku_Exit As Button
     Friend WithEvents Button_Edit_Buku_Delete As Button
-    Friend WithEvents Button_Edit_Buku_Refresh As Button
     Friend WithEvents ComboBox_Edit_Buku_id As ComboBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DataGridView_DataBuku As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class

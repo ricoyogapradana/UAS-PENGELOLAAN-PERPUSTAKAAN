@@ -95,6 +95,7 @@ Partial Class Form_Penerbit
         'ComboBox_Add_Penerbit_status
         '
         Me.ComboBox_Add_Penerbit_status.FormattingEnabled = True
+        Me.ComboBox_Add_Penerbit_status.Items.AddRange(New Object() {"SWASTA", "NEGERI", "UNIVERSITAS"})
         Me.ComboBox_Add_Penerbit_status.Location = New System.Drawing.Point(135, 136)
         Me.ComboBox_Add_Penerbit_status.Name = "ComboBox_Add_Penerbit_status"
         Me.ComboBox_Add_Penerbit_status.Size = New System.Drawing.Size(117, 21)
@@ -223,6 +224,7 @@ Partial Class Form_Penerbit
         'ComboBox_Edit_Penerbit_status
         '
         Me.ComboBox_Edit_Penerbit_status.FormattingEnabled = True
+        Me.ComboBox_Edit_Penerbit_status.Items.AddRange(New Object() {"SWASTA", "NEGERI", "UNIVERSITAS"})
         Me.ComboBox_Edit_Penerbit_status.Location = New System.Drawing.Point(135, 136)
         Me.ComboBox_Edit_Penerbit_status.Name = "ComboBox_Edit_Penerbit_status"
         Me.ComboBox_Edit_Penerbit_status.Size = New System.Drawing.Size(117, 21)

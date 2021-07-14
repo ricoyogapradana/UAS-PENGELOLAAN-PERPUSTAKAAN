@@ -25,8 +25,8 @@ Public Class Form_Anggota
     Private Sub Form_Anggota_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         koneksi()
         tampilAnggota()
+        generateTahun()
     End Sub
-
 
     'Tambah'
     Sub tambah()
@@ -100,6 +100,10 @@ Public Class Form_Anggota
         End If
     End Sub
 
+    Sub generateTahun()
+        Dim tahun As String = Date.Now.Year
+        TextBox_Add_Anggota_bergabung.Text = tahun
+    End Sub
     Private Sub Button_Edit_Anggota_New_Click(sender As Object, e As EventArgs) Handles Button_Edit_Anggota_New.Click
         ComboBox_Edit_Anggota_id.Text = ""
         TextBox_Edit_Anggota_username.Text = ""

@@ -43,6 +43,8 @@ Partial Class Form_Anggota
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button_Edit_Anggota_Delete = New System.Windows.Forms.Button()
+        Me.Button_Edit_Anggota_Refresh = New System.Windows.Forms.Button()
         Me.ComboBox_Edit_Anggota_id = New System.Windows.Forms.ComboBox()
         Me.TextBox_Edit_Anggota_bergabung = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -62,8 +64,6 @@ Partial Class Form_Anggota
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Button_Anggota_Exit = New System.Windows.Forms.Button()
-        Me.Button_Edit_Anggota_Refresh = New System.Windows.Forms.Button()
-        Me.Button_Edit_Anggota_Delete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -107,6 +107,7 @@ Partial Class Form_Anggota
         '
         'TextBox_Add_Anggota_bergabung
         '
+        Me.TextBox_Add_Anggota_bergabung.Enabled = False
         Me.TextBox_Add_Anggota_bergabung.Location = New System.Drawing.Point(135, 186)
         Me.TextBox_Add_Anggota_bergabung.Name = "TextBox_Add_Anggota_bergabung"
         Me.TextBox_Add_Anggota_bergabung.Size = New System.Drawing.Size(100, 20)
@@ -124,7 +125,7 @@ Partial Class Form_Anggota
         'ComboBox_Add_Anggota_status
         '
         Me.ComboBox_Add_Anggota_status.FormattingEnabled = True
-        Me.ComboBox_Add_Anggota_status.Items.AddRange(New Object() {"MAHASISWA", "UMUM", "MEMBER"})
+        Me.ComboBox_Add_Anggota_status.Items.AddRange(New Object() {"MAHASISWA", "MEMBER", "UMUM"})
         Me.ComboBox_Add_Anggota_status.Location = New System.Drawing.Point(135, 211)
         Me.ComboBox_Add_Anggota_status.Name = "ComboBox_Add_Anggota_status"
         Me.ComboBox_Add_Anggota_status.Size = New System.Drawing.Size(117, 21)
@@ -282,6 +283,24 @@ Partial Class Form_Anggota
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "EDIT ANGGOTA"
         '
+        'Button_Edit_Anggota_Delete
+        '
+        Me.Button_Edit_Anggota_Delete.Location = New System.Drawing.Point(111, 258)
+        Me.Button_Edit_Anggota_Delete.Name = "Button_Edit_Anggota_Delete"
+        Me.Button_Edit_Anggota_Delete.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Anggota_Delete.TabIndex = 23
+        Me.Button_Edit_Anggota_Delete.Text = "DELETE"
+        Me.Button_Edit_Anggota_Delete.UseVisualStyleBackColor = True
+        '
+        'Button_Edit_Anggota_Refresh
+        '
+        Me.Button_Edit_Anggota_Refresh.Location = New System.Drawing.Point(201, 258)
+        Me.Button_Edit_Anggota_Refresh.Name = "Button_Edit_Anggota_Refresh"
+        Me.Button_Edit_Anggota_Refresh.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Anggota_Refresh.TabIndex = 22
+        Me.Button_Edit_Anggota_Refresh.Text = "REFRESH"
+        Me.Button_Edit_Anggota_Refresh.UseVisualStyleBackColor = True
+        '
         'ComboBox_Edit_Anggota_id
         '
         Me.ComboBox_Edit_Anggota_id.FormattingEnabled = True
@@ -292,6 +311,7 @@ Partial Class Form_Anggota
         '
         'TextBox_Edit_Anggota_bergabung
         '
+        Me.TextBox_Edit_Anggota_bergabung.Enabled = False
         Me.TextBox_Edit_Anggota_bergabung.Location = New System.Drawing.Point(135, 186)
         Me.TextBox_Edit_Anggota_bergabung.Name = "TextBox_Edit_Anggota_bergabung"
         Me.TextBox_Edit_Anggota_bergabung.Size = New System.Drawing.Size(100, 20)
@@ -309,7 +329,7 @@ Partial Class Form_Anggota
         'ComboBox_Edit_Anggota_status
         '
         Me.ComboBox_Edit_Anggota_status.FormattingEnabled = True
-        Me.ComboBox_Edit_Anggota_status.Items.AddRange(New Object() {"MAHASISWA", "UMUM", "MEMBER"})
+        Me.ComboBox_Edit_Anggota_status.Items.AddRange(New Object() {"MAHASISWA", "MEMBER", "UMUM"})
         Me.ComboBox_Edit_Anggota_status.Location = New System.Drawing.Point(135, 211)
         Me.ComboBox_Edit_Anggota_status.Name = "ComboBox_Edit_Anggota_status"
         Me.ComboBox_Edit_Anggota_status.Size = New System.Drawing.Size(117, 21)
@@ -439,24 +459,6 @@ Partial Class Form_Anggota
         Me.Button_Anggota_Exit.TabIndex = 22
         Me.Button_Anggota_Exit.Text = "EXIT"
         Me.Button_Anggota_Exit.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Anggota_Refresh
-        '
-        Me.Button_Edit_Anggota_Refresh.Location = New System.Drawing.Point(201, 258)
-        Me.Button_Edit_Anggota_Refresh.Name = "Button_Edit_Anggota_Refresh"
-        Me.Button_Edit_Anggota_Refresh.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Anggota_Refresh.TabIndex = 22
-        Me.Button_Edit_Anggota_Refresh.Text = "REFRESH"
-        Me.Button_Edit_Anggota_Refresh.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Anggota_Delete
-        '
-        Me.Button_Edit_Anggota_Delete.Location = New System.Drawing.Point(111, 258)
-        Me.Button_Edit_Anggota_Delete.Name = "Button_Edit_Anggota_Delete"
-        Me.Button_Edit_Anggota_Delete.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Anggota_Delete.TabIndex = 23
-        Me.Button_Edit_Anggota_Delete.Text = "DELETE"
-        Me.Button_Edit_Anggota_Delete.UseVisualStyleBackColor = True
         '
         'Form_Anggota
         '

@@ -41,6 +41,8 @@ Partial Class Form_Admin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button_Edit_Admin_Refresh = New System.Windows.Forms.Button()
+        Me.Button_Edit_Admin_Delete = New System.Windows.Forms.Button()
         Me.ComboBox_Edit_Admin_status = New System.Windows.Forms.ComboBox()
         Me.ComboBox_Edit_Admin_id = New System.Windows.Forms.ComboBox()
         Me.Button_Edit_Admin_Update = New System.Windows.Forms.Button()
@@ -58,8 +60,6 @@ Partial Class Form_Admin
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button_Admin_Exit = New System.Windows.Forms.Button()
-        Me.Button_Edit_Admin_Delete = New System.Windows.Forms.Button()
-        Me.Button_Edit_Admin_Refresh = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -102,6 +102,7 @@ Partial Class Form_Admin
         'ComboBox_Add_Admin_status
         '
         Me.ComboBox_Add_Admin_status.FormattingEnabled = True
+        Me.ComboBox_Add_Admin_status.Items.AddRange(New Object() {"ADMIN", "PENGELOLA", "STAFF"})
         Me.ComboBox_Add_Admin_status.Location = New System.Drawing.Point(135, 185)
         Me.ComboBox_Add_Admin_status.Name = "ComboBox_Add_Admin_status"
         Me.ComboBox_Add_Admin_status.Size = New System.Drawing.Size(117, 21)
@@ -257,9 +258,28 @@ Partial Class Form_Admin
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "EDIT ADMIN"
         '
+        'Button_Edit_Admin_Refresh
+        '
+        Me.Button_Edit_Admin_Refresh.Location = New System.Drawing.Point(203, 229)
+        Me.Button_Edit_Admin_Refresh.Name = "Button_Edit_Admin_Refresh"
+        Me.Button_Edit_Admin_Refresh.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Admin_Refresh.TabIndex = 25
+        Me.Button_Edit_Admin_Refresh.Text = "REFRESH"
+        Me.Button_Edit_Admin_Refresh.UseVisualStyleBackColor = True
+        '
+        'Button_Edit_Admin_Delete
+        '
+        Me.Button_Edit_Admin_Delete.Location = New System.Drawing.Point(113, 229)
+        Me.Button_Edit_Admin_Delete.Name = "Button_Edit_Admin_Delete"
+        Me.Button_Edit_Admin_Delete.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Edit_Admin_Delete.TabIndex = 24
+        Me.Button_Edit_Admin_Delete.Text = "DELETE"
+        Me.Button_Edit_Admin_Delete.UseVisualStyleBackColor = True
+        '
         'ComboBox_Edit_Admin_status
         '
         Me.ComboBox_Edit_Admin_status.FormattingEnabled = True
+        Me.ComboBox_Edit_Admin_status.Items.AddRange(New Object() {"ADMIN", "PENGELOLA", "STAFF"})
         Me.ComboBox_Edit_Admin_status.Location = New System.Drawing.Point(135, 185)
         Me.ComboBox_Edit_Admin_status.Name = "ComboBox_Edit_Admin_status"
         Me.ComboBox_Edit_Admin_status.Size = New System.Drawing.Size(117, 21)
@@ -397,24 +417,6 @@ Partial Class Form_Admin
         Me.Button_Admin_Exit.TabIndex = 17
         Me.Button_Admin_Exit.Text = "EXIT"
         Me.Button_Admin_Exit.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Admin_Delete
-        '
-        Me.Button_Edit_Admin_Delete.Location = New System.Drawing.Point(113, 229)
-        Me.Button_Edit_Admin_Delete.Name = "Button_Edit_Admin_Delete"
-        Me.Button_Edit_Admin_Delete.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Admin_Delete.TabIndex = 24
-        Me.Button_Edit_Admin_Delete.Text = "DELETE"
-        Me.Button_Edit_Admin_Delete.UseVisualStyleBackColor = True
-        '
-        'Button_Edit_Admin_Refresh
-        '
-        Me.Button_Edit_Admin_Refresh.Location = New System.Drawing.Point(203, 229)
-        Me.Button_Edit_Admin_Refresh.Name = "Button_Edit_Admin_Refresh"
-        Me.Button_Edit_Admin_Refresh.Size = New System.Drawing.Size(75, 23)
-        Me.Button_Edit_Admin_Refresh.TabIndex = 25
-        Me.Button_Edit_Admin_Refresh.Text = "REFRESH"
-        Me.Button_Edit_Admin_Refresh.UseVisualStyleBackColor = True
         '
         'Form_Admin
         '

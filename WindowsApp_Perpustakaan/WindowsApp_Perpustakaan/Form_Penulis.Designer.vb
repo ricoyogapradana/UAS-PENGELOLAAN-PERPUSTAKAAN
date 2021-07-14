@@ -96,6 +96,7 @@ Partial Class Form_Penulis
         'ComboBox_Add_Penulis_status
         '
         Me.ComboBox_Add_Penulis_status.FormattingEnabled = True
+        Me.ComboBox_Add_Penulis_status.Items.AddRange(New Object() {"AKTIF", "PASIF", "TIDAK AKTIF"})
         Me.ComboBox_Add_Penulis_status.Location = New System.Drawing.Point(135, 160)
         Me.ComboBox_Add_Penulis_status.Name = "ComboBox_Add_Penulis_status"
         Me.ComboBox_Add_Penulis_status.Size = New System.Drawing.Size(117, 21)
@@ -262,6 +263,7 @@ Partial Class Form_Penulis
         'ComboBox_Edit_Penulis_status
         '
         Me.ComboBox_Edit_Penulis_status.FormattingEnabled = True
+        Me.ComboBox_Edit_Penulis_status.Items.AddRange(New Object() {"AKTIF", "PASIF", "TIDAK AKTIF"})
         Me.ComboBox_Edit_Penulis_status.Location = New System.Drawing.Point(135, 160)
         Me.ComboBox_Edit_Penulis_status.Name = "ComboBox_Edit_Penulis_status"
         Me.ComboBox_Edit_Penulis_status.Size = New System.Drawing.Size(117, 21)

@@ -73,3 +73,5 @@ C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Transaksi_Peminjaman.resources
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\RdlCompile.cache
 C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\RdlCompile.compiled
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.HalamanDepan.resources
+C:\Users\Rico Yoga\source\repos\WindowsApp_Perpustakaan\WindowsApp_Perpustakaan\obj\Debug\WindowsApp_Perpustakaan.Form_AboutMe.resources

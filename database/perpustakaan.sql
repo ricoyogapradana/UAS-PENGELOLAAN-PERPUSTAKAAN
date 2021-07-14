@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2021 at 06:50 PM
+-- Generation Time: Jul 14, 2021 at 07:37 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_admin` (
-  `id_admin` int(8) NOT NULL,
+  `id_admin` int(16) NOT NULL,
   `username` varchar(16) NOT NULL,
   `nama_admin` varchar(255) NOT NULL,
   `tempat_lahir` varchar(64) NOT NULL,
@@ -37,13 +37,6 @@ CREATE TABLE `tbl_admin` (
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tbl_admin`
---
-
-INSERT INTO `tbl_admin` (`id_admin`, `username`, `nama_admin`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `status`) VALUES
-(1, 'alyh', 'aliya', '12', '12', '12', '1');
-
 -- --------------------------------------------------------
 
 --
@@ -51,7 +44,7 @@ INSERT INTO `tbl_admin` (`id_admin`, `username`, `nama_admin`, `tempat_lahir`, `
 --
 
 CREATE TABLE `tbl_anggota` (
-  `id_anggota` int(8) NOT NULL,
+  `id_anggota` int(16) NOT NULL,
   `username` varchar(16) NOT NULL,
   `nama_anggota` varchar(255) NOT NULL,
   `tempat_lahir` varchar(64) NOT NULL,
@@ -61,13 +54,6 @@ CREATE TABLE `tbl_anggota` (
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tbl_anggota`
---
-
-INSERT INTO `tbl_anggota` (`id_anggota`, `username`, `nama_anggota`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `tahun_bergabung`, `status`) VALUES
-(1, 'ricya', 'RICO YOGA', '12', '12', '12', '12', '1');
-
 -- --------------------------------------------------------
 
 --
@@ -75,20 +61,13 @@ INSERT INTO `tbl_anggota` (`id_anggota`, `username`, `nama_anggota`, `tempat_lah
 --
 
 CREATE TABLE `tbl_buku` (
-  `id_buku` int(8) NOT NULL,
+  `id_buku` int(12) NOT NULL,
   `nama_buku` varchar(255) NOT NULL,
   `id_penulis` varchar(8) NOT NULL,
   `id_penerbit` varchar(8) NOT NULL,
   `tahun_terbit` varchar(4) NOT NULL,
   `status` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbl_buku`
---
-
-INSERT INTO `tbl_buku` (`id_buku`, `nama_buku`, `id_penulis`, `id_penerbit`, `tahun_terbit`, `status`) VALUES
-(12, 'qweqasdas', '123141', '12', '12', 'PEMBELAJARAN');
 
 -- --------------------------------------------------------
 
@@ -97,7 +76,7 @@ INSERT INTO `tbl_buku` (`id_buku`, `nama_buku`, `id_penulis`, `id_penerbit`, `ta
 --
 
 CREATE TABLE `tbl_peminjaman` (
-  `id_peminjaman` int(8) NOT NULL,
+  `id_peminjaman` int(32) NOT NULL,
   `id_anggota` varchar(255) NOT NULL,
   `id_admin` varchar(255) NOT NULL,
   `id_buku` varchar(255) NOT NULL,
@@ -109,20 +88,6 @@ CREATE TABLE `tbl_peminjaman` (
   `status` varchar(14) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `tbl_peminjaman`
---
-
-INSERT INTO `tbl_peminjaman` (`id_peminjaman`, `id_anggota`, `id_admin`, `id_buku`, `nama_buku`, `id_penulis`, `id_penerbit`, `tanggal_pinjam`, `tanggal_pengembalian`, `status`) VALUES
-(1, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Tuesday, July 13, 2021', '3'),
-(2, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Tuesday, July 13, 2021', 'SELESAI'),
-(23, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Tuesday, July 13, 2021', 'DIPINJAM'),
-(32, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Tuesday, July 13, 2021', 'DIPINJAM'),
-(45, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Tuesday, July 13, 2021', 'DIPINJAM'),
-(69, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Friday, July 16, 2021', 'DIPINJAM'),
-(321, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Tuesday, July 13, 2021', 'Friday, July 30, 2021', 'DIPINJAM'),
-(2313, 'RICO YOGA', 'aliya', '12', 'qweqasdas', '123141', '12', 'Friday, July 9, 2021', 'Tuesday, July 13, 2021', 'DIPINJAM');
-
 -- --------------------------------------------------------
 
 --
@@ -130,20 +95,12 @@ INSERT INTO `tbl_peminjaman` (`id_peminjaman`, `id_anggota`, `id_admin`, `id_buk
 --
 
 CREATE TABLE `tbl_penerbit` (
-  `id_penerbit` int(8) NOT NULL,
+  `id_penerbit` int(16) NOT NULL,
   `nama_penerbit` varchar(255) NOT NULL,
   `tahun_berdiri` varchar(4) NOT NULL,
   `no_hp` varchar(14) NOT NULL,
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbl_penerbit`
---
-
-INSERT INTO `tbl_penerbit` (`id_penerbit`, `nama_penerbit`, `tahun_berdiri`, `no_hp`, `status`) VALUES
-(2, 'dsaasdasdsa', '2020', '1234', '1'),
-(43123, '123123', '123', '123', '1');
 
 -- --------------------------------------------------------
 
@@ -152,21 +109,13 @@ INSERT INTO `tbl_penerbit` (`id_penerbit`, `nama_penerbit`, `tahun_berdiri`, `no
 --
 
 CREATE TABLE `tbl_penulis` (
-  `id_penulis` int(8) NOT NULL,
+  `id_penulis` int(16) NOT NULL,
   `nama_penulis` varchar(255) NOT NULL,
   `tempat_lahir` varchar(64) NOT NULL,
   `tanggal_lahir` varchar(64) NOT NULL,
   `no_hp` varchar(14) NOT NULL,
   `status` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tbl_penulis`
---
-
-INSERT INTO `tbl_penulis` (`id_penulis`, `nama_penulis`, `tempat_lahir`, `tanggal_lahir`, `no_hp`, `status`) VALUES
-(1, '123141', '12', '12', '21', '12'),
-(2, 'asd', '12', 'Tuesday, July 13, 2021', '12', '2');
 
 --
 -- Indexes for dumped tables
@@ -216,7 +165,7 @@ ALTER TABLE `tbl_penulis`
 -- AUTO_INCREMENT for table `tbl_peminjaman`
 --
 ALTER TABLE `tbl_peminjaman`
-  MODIFY `id_peminjaman` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2314;
+  MODIFY `id_peminjaman` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20201296;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -79,6 +79,7 @@ Partial Class Form_Peminjaman
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button_Add_Peminjaman_generate = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -97,6 +98,7 @@ Partial Class Form_Peminjaman
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button_Add_Peminjaman_generate)
         Me.GroupBox1.Controls.Add(Me.TextBox_Add_Peminjaman_namaBuku)
         Me.GroupBox1.Controls.Add(Me.ComboBox_Add_Peminjaman_status)
         Me.GroupBox1.Controls.Add(Me.Label19)
@@ -242,6 +244,7 @@ Partial Class Form_Peminjaman
         '
         'TextBox_Add_Peminjaman_id
         '
+        Me.TextBox_Add_Peminjaman_id.Enabled = False
         Me.TextBox_Add_Peminjaman_id.Location = New System.Drawing.Point(135, 32)
         Me.TextBox_Add_Peminjaman_id.Name = "TextBox_Add_Peminjaman_id"
         Me.TextBox_Add_Peminjaman_id.Size = New System.Drawing.Size(127, 20)
@@ -582,6 +585,15 @@ Partial Class Form_Peminjaman
         Me.Column10.HeaderText = "STATUS"
         Me.Column10.Name = "Column10"
         '
+        'Button_Add_Peminjaman_generate
+        '
+        Me.Button_Add_Peminjaman_generate.Location = New System.Drawing.Point(268, 30)
+        Me.Button_Add_Peminjaman_generate.Name = "Button_Add_Peminjaman_generate"
+        Me.Button_Add_Peminjaman_generate.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Add_Peminjaman_generate.TabIndex = 35
+        Me.Button_Add_Peminjaman_generate.Text = "GENERATE"
+        Me.Button_Add_Peminjaman_generate.UseVisualStyleBackColor = True
+        '
         'Form_Peminjaman
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -662,4 +674,5 @@ Partial Class Form_Peminjaman
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
+    Friend WithEvents Button_Add_Peminjaman_generate As Button
 End Class

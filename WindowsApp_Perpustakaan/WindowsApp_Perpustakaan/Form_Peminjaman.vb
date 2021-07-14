@@ -52,6 +52,12 @@ Public Class Form_Peminjaman
         Loop
     End Sub
 
+    Sub generateId()
+        Dim value As Integer = Math.Ceiling(Rnd() * 2000)
+        Dim random As String = Convert.ToString(value)
+        TextBox_Add_Peminjaman_id.Text = "2020" & random
+    End Sub
+
     Private Sub Form_peminjaman_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         koneksi()
         tampilpeminjaman()
@@ -59,6 +65,8 @@ Public Class Form_Peminjaman
         tampilAdmin()
         tampilBuku()
         tampilDataPeminjaman()
+        Randomize()
+        generateId()
     End Sub
 
     'Tambah'
@@ -202,5 +210,10 @@ Public Class Form_Peminjaman
         Catch ex As Exception
             MsgBox("Menampilkan data GAGAL")
         End Try
+    End Sub
+
+    Private Sub Button_Add_Peminjaman_generate_Click(sender As Object, e As EventArgs) Handles Button_Add_Peminjaman_generate.Click
+        Randomize()
+        generateId()
     End Sub
 End Class
